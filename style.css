@@ -1,0 +1,677 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Serif', serif;
+	background-color: #F2F2F2;
+}
+
+h1
+{
+	margin: 1em 0;
+	font-size: 36px;
+	font-style: bold;
+	line-height: 32px;
+}
+h2
+{
+	font-size:26;
+	font-style:bold;
+	margin: 2em 0;
+}
+
+
+p
+{
+	margin: 1em 10px;
+	font-size: 18px;
+	line-height: 30px;
+	/*text-align: justify;
+    text-justify: inter-word;*/
+
+}
+
+
+
+blockquote
+{
+	
+	font-size: 18pt;
+	margin:   2em -10px;
+	line-height: 38px;
+}
+
+#wrapper
+{
+	/* padding: 50px 40px 20px 40px; */
+}
+header
+{
+	padding: 5vh 40px;
+	height: 10vh;
+}
+footer
+{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 100px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 83%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(83%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );  MICROSOFT... *sigh*  */
+	/*	display:none;*/
+}
+hr
+{
+    border: 0;
+  	border-top: 2px solid #000;
+}
+
+/* INTRO ESSAY STYES  */
+.intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
+{
+	overflow-y:scroll;
+}
+.intro_wrapper
+{
+	height: 100vh;
+}
+.intro_essay
+{
+
+	height: 500px;
+	width: 650px;
+	margin-right:auto;
+	margin-left:auto;
+	float: center;
+
+}
+
+/* COMPLETE ESSAY STYLES */
+
+.essay_wrapper
+{
+	clear: both;
+}
+
+.essay_nav, .essay_nav_inner
+{
+	width: 250px;
+	float: left;
+	margin-left: 20px;
+	margin-top:90px;
+}
+
+.essay_nav_inner
+{
+	font-size: 10pt;
+
+}
+
+.essay_nav ul
+{
+	padding: 10px 0 0;
+}
+.essay_nav li
+{
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+.scrolling 
+{ /* keep the navigatation at the top */
+    position: fixed;
+    top: 0;
+}
+.essay_complete
+{
+	
+	margin: 0 auto;
+	width: 650px;
+	margin-bottom: 200px;
+}
+
+
+
+.footnote
+{
+	font-family: 'Univers', sans-serif;
+	font-weight: normal;
+	font-size:8pt;
+	color:#404040;
+}
+
+
+.footnotes p
+{
+	font-family: 'Univers', sans-serif;
+	font-size:10pt;
+	line-height: 26px;
+
+}
+
+/* ESSAY SWITCH STYLES */
+
+.the_essay
+{
+	margin-top: 25px;
+	padding-top: 25px;
+	display: none;
+}
+
+/* andere stijlen */
+.button
+{
+	color: #000;
+	padding: 7px 10px;
+	border:2px solid #000;
+	font-family: 'Univers', sans-serif;
+	font-size: 10pt;
+	margin-left: 20pt;
+
+}
+.button:hover
+{
+	background: #000;
+	color:#fff;
+	text-shadow: none;
+}
+
+/* links stijlen */
+a
+{
+	color: black;
+	text-decoration: none;
+}
+a:hover
+{
+	color: red;
+	text-decoration: underline;
+
+}
+a:visited
+{
+	text-decoration: none;
+}
+a:active
+{
+	text-decoration: none;
+}
+.draagbaar
+{
+	cursor: all-scroll;
+	background-color: red;
+	/*width: 300px;
+	height: 300px;*/
+	overflow-y: none;
+	position: absolute;
+	z-index: 0;
+}
+#frame_wrapper
+{
+	display: none;
+}
+
+
+span.anker
+{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+}
+
+/*
+	note; let op elke frame moet een TOP en een LEFT waarde hebben. OOK als die 0 is!
+*/
+#frame01
+{
+	width:298px;
+	height:300;
+	top: 0px;
+	left: 0px;
+}
+
+#frame1.1
+{
+	width:200px;
+	height:300;
+	top: 0px;
+	left: 0px;
+}
+
+#frame02
+{
+	width:300px;
+	height:180;
+	top: 0px;
+	left: 0px;
+}
+
+#frame02.2
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame03
+{
+	width:300px;
+	height:204px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame04
+{
+	width:300px;
+	height:300;
+	top: 0px;
+	left: 0px;
+}
+
+#frame05
+{
+	width:300px;
+	height:300;
+	top: 0px;
+	left: 0px;
+}
+
+#frame06
+{
+	width:300px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame06.2
+{
+	width:300px;
+	height:153px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame07
+{
+	width:300px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame08
+{
+	width:300px;
+	height:185px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame09
+{
+	width:300px;
+	height:233px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame10
+{
+	width:300px;
+	height:154px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame11
+{
+	width:300px;
+	height:115px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame12
+{
+	width:273px;
+	height:185px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame13
+{
+	width:300px;
+	height:188px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame14
+{
+	width:300px;
+	height:271px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame15
+{
+	width:300px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame16
+{
+	width:171px;
+	height:253px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame17
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame18
+{
+	width:300px;
+	height:217px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame19
+{
+	width:300px;
+	height:226px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame20
+{
+	width:300px;
+	height:169px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame21
+{
+	width:300px;
+	height:210px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame22
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame23
+{
+	width:300px;
+	height:279px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame24
+{
+	width:220px;
+	height:260px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame25
+{
+	width:300px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame26
+{
+	width:184px;
+	height:300px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame27
+{
+	width:300px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame28
+{
+	width:275px;
+	height:183px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame29
+{
+	width:262px;
+	height:193px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame30
+{
+	width:300px;
+	height:265px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame31
+{
+	width:300px;
+	height:192px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame32
+{
+	width:300px;
+	height:199px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame33
+{
+	width:225px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame34
+{
+	width:229px;
+	height:300px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame35
+{
+	width:254px;
+	height:300px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame36
+{
+	width:300px;
+	height:223px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame37 
+{
+	width:300px;
+	height:193px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame38
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame39 
+{
+	width:300px;
+	height:171px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame40
+{
+	width:300px;
+	height:195px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame41
+{
+	width:300px;
+	height:198px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame42
+{
+	width:222px;
+	height:300px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame43
+{
+	width:200px;
+	height:300px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame44
+{
+	width:275px;
+	height:183px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame45
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame46
+{
+	width:300px;
+	height:215px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame47
+{
+	width:300px;
+	height:225px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame48
+{
+	width:235px;
+	height:215px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame49
+{
+	width:300px;
+	height:189px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame50
+{
+	width:225px;
+	height:224px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame51
+{
+	width:211px;
+	height:238px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame52
+{
+	width:300px;
+	height:201px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame53
+{
+	width:300px;
+	height:177px;
+	top: 0px;
+	left: 0px;
+}
+
+
