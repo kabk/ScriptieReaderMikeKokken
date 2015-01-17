@@ -89,7 +89,7 @@ function snapToAnker()
            {
                 "top": ankers[i].top + frames[i].top + "px",
                 "left": ankers[i].left + frames[i].left + "px",
-                "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"
+                // "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"
            });
         }
     }
@@ -97,6 +97,8 @@ function snapToAnker()
     {
         alert("Er zijn niet een gelijk aantal ankers en frames..")
     }
+    
+    console.log("ankers: " +ankers.length+ ", frames: " +frames.length)
 
 }
 /*

@@ -35,7 +35,7 @@ p
 
 blockquote
 {
-	
+
 	font-size: 18pt;
 	margin:   2em -10px;
 	line-height: 38px;
@@ -121,14 +121,14 @@ hr
 	list-style-type: none;
 	margin-bottom: 10px;
 }
-.scrolling 
+.scrolling
 { /* keep the navigatation at the top */
     position: fixed;
     top: 0;
 }
 .essay_complete
 {
-	
+
 	margin: 0 auto;
 	width: 650px;
 	margin-bottom: 200px;
@@ -203,7 +203,6 @@ a:active
 .draagbaar
 {
 	cursor: all-scroll;
-	background-color: red;
 	/*width: 300px;
 	height: 300px;*/
 	overflow-y: none;
@@ -221,12 +220,13 @@ span.anker
 	width: 10px;
 	height: 10px;
 	position: absolute;
+	background-color: #00FF00;
 }
 
 /*
 	note; let op elke frame moet een TOP en een LEFT waarde hebben. OOK als die 0 is!
 */
-#frame01
+#frame1
 {
 	width:298px;
 	height:300;
@@ -242,7 +242,7 @@ span.anker
 	left: 0px;
 }
 
-#frame02
+#frame2
 {
 	width:300px;
 	height:180;
@@ -250,7 +250,7 @@ span.anker
 	left: 0px;
 }
 
-#frame02.2
+#frame2.2
 {
 	width:300px;
 	height:225px;
@@ -258,7 +258,7 @@ span.anker
 	left: 0px;
 }
 
-#frame03
+#frame3
 {
 	width:300px;
 	height:204px;
@@ -266,7 +266,7 @@ span.anker
 	left: 0px;
 }
 
-#frame04
+#frame4
 {
 	width:300px;
 	height:300;
@@ -274,7 +274,7 @@ span.anker
 	left: 0px;
 }
 
-#frame05
+#frame5
 {
 	width:300px;
 	height:300;
@@ -282,7 +282,7 @@ span.anker
 	left: 0px;
 }
 
-#frame06
+#frame6
 {
 	width:300px;
 	height:200px;
@@ -298,7 +298,7 @@ span.anker
 	left: 0px;
 }
 
-#frame07
+#frame7
 {
 	width:300px;
 	height:200px;
@@ -306,7 +306,7 @@ span.anker
 	left: 0px;
 }
 
-#frame08
+#frame8
 {
 	width:300px;
 	height:185px;
@@ -314,7 +314,7 @@ span.anker
 	left: 0px;
 }
 
-#frame09
+#frame9
 {
 	width:300px;
 	height:233px;
@@ -538,7 +538,7 @@ span.anker
 	left: 0px;
 }
 
-#frame37 
+#frame37
 {
 	width:300px;
 	height:193px;
@@ -554,7 +554,7 @@ span.anker
 	left: 0px;
 }
 
-#frame39 
+#frame39
 {
 	width:300px;
 	height:171px;
@@ -673,5 +673,26 @@ span.anker
 	top: 0px;
 	left: 0px;
 }
+#frame54
+{
+	width:211px;
+	height:238px;
+	top: 0px;
+	left: 0px;
+}
 
+#frame55
+{
+	width:300px;
+	height:201px;
+	top: 0px;
+	left: 0px;
+}
 
+#frame56
+{
+	width:300px;
+	height:177px;
+	top: 0px;
+	left: 0px;
+}
