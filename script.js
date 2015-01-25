@@ -18,7 +18,10 @@ function loadEssay()
     $('#the_essay').fadeIn( "slow", function()
     {
         $('#frame_wrapper').fadeIn("slow");
+
         $.scrollTo( $('#the_essay'), 1000 );
+        $('footer').fadeIn("slow");
+
 
         // deze if statement zorgt ervoor dat als je nog een keer op lees klikt die frames niet nog een keer gepositioneerd worden.
         if (firstTry)
@@ -97,7 +100,7 @@ function snapToAnker()
     {
         alert("Er zijn niet een gelijk aantal ankers en frames..")
     }
-    
+
     console.log("ankers: " +ankers.length+ ", frames: " +frames.length)
 
 }
