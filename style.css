@@ -8,22 +8,47 @@ html, body
 
 h1
 {
-	margin: 1em 0;
+	margin: 5em 0 0.5em 0;
 	font-size: 36px;
 	font-style: bold;
-	line-height: 32px;
+	line-height: 30px;
+	text-align: center;
+	color:black;
+
 }
 h2
 {
-	font-size:26;
+	font-size:22px;
 	font-style:bold;
-	margin: 2em 0;
+	margin: 2.5em 0 0.5em;
 }
 
+h3
+{
+
+	margin: 0 0 7em 0;
+	font-size: 18px;
+	text-align: center;
+	line-height: 14px;
+	color:black;
+}
+
+h4 {
+	font-size: 20px;
+	font-style: italic; 
+    text-decoration: underline;
+    text-align: center;
+}
+
+h5 {
+	font-size: 10px;
+	line-height: 14px;
+	margin: 0.1em;
+}
 
 p
 {
-	margin: 1em 10px;
+	margin: 1em;
 	font-size: 18px;
 	line-height: 30px;
 	/*text-align: justify;
@@ -62,8 +87,8 @@ footer
 	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
 	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+	pointer-events:none;
 	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );  MICROSOFT... *sigh*  */
-		display:none;
 }
 hr
 {
@@ -74,6 +99,7 @@ hr
 /* INTRO ESSAY STYES  */
 .intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
 {
+/*	height: 100vh;*/
 	height: 100vh;
 	overflow-y: scroll;
 	background-color: #000;
@@ -82,12 +108,14 @@ hr
 .intro_wrapper
 {
 	padding-top: 10vh;
+	padding-bottom: 200px;
 }
 .intro_essay
 {
 	width: 650px;
 	margin: 0 auto;
 	float: center;
+
 
 }
 
@@ -142,6 +170,8 @@ hr
 	font-weight: normal;
 	font-size:8pt;
 	color:#404040;
+	vertical-align: super;
+	margin: 0 0 0 3px;
 }
 
 
@@ -231,7 +261,7 @@ span.anker
 	width:298px;
 	height:300;
 	top: 0px;
-	left: 0px;
+	left: -50px;
 }
 
 #frame2
@@ -239,7 +269,7 @@ span.anker
 	width:200px;
 	height:300;
 	top: 0px;
-	left: 0px;
+	left: -30px;
 }
 
 #frame3
@@ -247,14 +277,14 @@ span.anker
 	width:300px;
 	height:180;
 	top: 0px;
-	left: 0px;
+	left: 300px;
 }
 
 #frame4
 {
 	width:300px;
 	height:225px;
-	top: 0px;
+	top: 100px;
 	left: 0px;
 }
 
@@ -262,15 +292,15 @@ span.anker
 {
 	width:300px;
 	height:204px;
-	top: -100px;
-	left: -500px;
+	top: 0px;
+	left: -200px;
 }
 
 #frame6
 {
 	width:300px;
 	height:300;
-	top: -50px;
+	top: 2000px;
 	left: -100px;
 }
 
@@ -278,15 +308,15 @@ span.anker
 {
 	width:300px;
 	height:0;
-	top: 200px;
-	left:-400px;
+	top: 0px;
+	left:-200px;
 }
 
 #frame8
 {
 	width:300px;
 	height:200px;
-	top: -300px;
+	top: 0px;
 	left: -300px;
 }
 
@@ -294,7 +324,7 @@ span.anker
 {
 	width:300px;
 	height:153px;
-	top: 0px;
+	top: 100px;
 	left: -100px;
 }
 
@@ -309,367 +339,63 @@ span.anker
 #frame11
 {
 	width:300px;
-	height:185px;
-	top: 0px;
+	height:200px;
+	top: 50px;
 	left: -100px;
 }
 
 #frame12
 {
 	width:300px;
-	height:233px;
-	top: 0px;
-	left: -300px;
-}
-
-#frame13
-{
-	width:300px;
-	height:154px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame14
-{
-	width:300px;
-	height:115px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame15
-{
-	width:273px;
-	height:185px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame16
-{
-	width:300px;
-	height:188px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame17
-{
-	width:300px;
-	height:271px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame18
-{
-	width:300px;
 	height:200px;
 	top: 0px;
-	left: 0px;
+	left: 100px;
 }
 
-#frame19
+
+/* KLOOTZAKKEN */
+
+.klootzakken-buiten {
+	position:relative;
+	z-index:999;
+	background-color: #F2F2F2;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin:-1.8em 0 -2em;
+	
+	
+}
+.klootzakken-binnen {
+	height: 50vh;
+	
+	overflow-y: scroll;
+}
+h6 
 {
-	width:171px;
-	height:253px;
-	top: 0px;
-	left: 0px;
+	font-family: sans-serif;
+	font-size: 24pt;
+	font-weight: bold;
+	margin:0 ;
 }
 
-#frame20
-{
-	width:300px;
-	height:225px;
-	top: 0px;
-	left: 0px;
+.klootzakkenItal{
+	font-size: 24pt;
+	font-style: italic; 
+	line-height: 1.2;
+	margin: 0.2em;
 }
 
-#frame21
-{
-	width:300px;
-	height:217px;
-	top: 0px;
-	left: 0px;
+.klootzakkenOnder{
+	font-size: 10px;
+	line-height: 14px;
+	margin: 0.1em;
+}
+.klootzakken-binnen p {
+	font-size: 20pt;
+	line-height: 1.5em;
+	margin: 1.5em;
 }
 
-#frame22
-{
-	width:300px;
-	height:226px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame23
-{
-	width:300px;
-	height:169px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame24
-{
-	width:300px;
-	height:210px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame25
-{
-	width:300px;
-	height:225px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame26
-{
-	width:300px;
-	height:279px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame27
-{
-	width:220px;
-	height:260px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame28
-{
-	width:300px;
-	height:200px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame29
-{
-	width:184px;
-	height:300px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame30
-{
-	width:300px;
-	height:200px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame31
-{
-	width:275px;
-	height:183px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame32
-{
-	width:262px;
-	height:193px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame33
-{
-	width:300px;
-	height:265px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame34
-{
-	width:300px;
-	height:192px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame35
-{
-	width:300px;
-	height:199px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame36
-{
-	width:225px;
-	height:225px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame37
-{
-	width:229px;
-	height:300px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame38
-{
-	width:254px;
-	height:300px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame39
-{
-	width:300px;
-	height:223px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame40
-{
-	width:300px;
-	height:193px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame41
-{
-	width:300px;
-	height:225px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame42
-{
-	width:300px;
-	height:171px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame43
-{
-	width:300px;
-	height:195px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame44
-{
-	width:300px;
-	height:198px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame45
-{
-	width:222px;
-	height:300px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame46
-{
-	width:200px;
-	height:300px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame47
-{
-	width:275px;
-	height:183px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame48
-{
-	width:300px;
-	height:225px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame49
-{
-	width:300px;
-	height:215px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame50
-{
-	width:300px;
-	height:225px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame51
-{
-	width:235px;
-	height:215px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame52
-{
-	width:300px;
-	height:189px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame53
-{
-	width:225px;
-	height:224px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame54
-{
-	width:211px;
-	height:238px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame55
-{
-	width:300px;
-	height:201px;
-	top: 0px;
-	left: 0px;
-}
-
-#frame56
-{
-	width:300px;
-	height:177px;
-	top: 0px;
-	left: 0px;
+.klootzakkenRef {
+	font: normal bold 12pt/1em "Helvetica", sans-serif;
 }

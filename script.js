@@ -91,7 +91,7 @@ function snapToAnker()
            $("#frame" + nummer).css(
            {
                 "top": ankers[i].top + frames[i].top + "px",
-                "left": ankers[i].left + frames[i].left + "px",
+                "left": ankers[i].left + frames[i].left + "px"
                 // "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"
            });
         }
