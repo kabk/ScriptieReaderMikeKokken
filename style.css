@@ -1,9 +1,17 @@
+
+
 html, body
 {
 	margin: 0;
 	padding: 0;
 	font-family: 'PT Serif', serif;
 	background-color: #F2F2F2;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after
+{
+	box-sizing: inherit;
 }
 
 h1
@@ -35,7 +43,7 @@ h3
 
 h4 {
 	font-size: 20px;
-	font-style: italic; 
+	font-style: italic;
     text-decoration: underline;
     text-align: center;
 }
@@ -94,6 +102,59 @@ hr
 {
     border: 0;
   	border-top: 2px solid #000;
+}
+/* THESIS NAVIGATION */
+
+.nav_bar
+{
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 15px;
+	z-index: 100;
+	background-color: #F2F2F2;
+}
+#left_nav_bar
+{
+	left: 0;
+}
+#right_nav_bar
+{
+ 	right: 0;
+}
+.handle
+{
+	height: 100vh;
+	width:15px;
+}
+#left_handle
+{
+	background-color: yellow;
+	float: right;
+}
+#right_handle
+{
+	background-color: red;
+	float: left;
+}
+.nav_bar ul
+{
+	padding: 0;
+	margin: 50px 0;
+}
+.nav_bar ul li
+{
+	list-style-type: none;
+	width: 25vw;
+}
+
+.chapter_list
+{
+	float: right;
+}
+.footnote_list
+{
+	float: left;
 }
 
 /* INTRO ESSAY STYES  */
@@ -362,15 +423,15 @@ span.anker
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	margin:-1.8em 0 -2em;
-	
-	
+
+
 }
 .klootzakken-binnen {
 	height: 50vh;
-	
+
 	overflow-y: scroll;
 }
-h6 
+h6
 {
 	font-family: sans-serif;
 	font-size: 24pt;
@@ -380,7 +441,7 @@ h6
 
 .klootzakkenItal{
 	font-size: 24pt;
-	font-style: italic; 
+	font-style: italic;
 	line-height: 1.2;
 	margin: 0.2em;
 }
