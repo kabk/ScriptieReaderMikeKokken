@@ -10,27 +10,27 @@ Array.max = function(array)
     return Math.max.apply(Math, array);
 }
 
-/*
-    scroll function to show essay and launch various other functions
-*/
-function loadEssay()
+$(function()
 {
-    $('#the_essay').fadeIn( "slow", function()
-    {
-
-
-        $.scrollTo( $('#the_essay'), 1000 );
-        $('footer').fadeIn("slow");
-
-
-        // deze if statement zorgt ervoor dat als je nog een keer op lees klikt die frames niet nog een keer gepositioneerd worden.
-        if (firstTry)
-        {
-
-            firstTry = false;
+    $('.nav_bar').on('click', function() {
+        if ($(this).hasClass('open')) {
+            $(this).animate({'width': '15px'}).removeClass('open');
+        }
+        else {
+            $(this).animate({'width': '50%'}).addClass('open');
         }
     });
-}
+
+    $(".draagbaar").draggable({ stack: ".draagbaar" });
+
+    $('.sesam').on('click', function() {
+        $('.essay_complete').slideToggle(10000, function() {
+            $('.draagbaar').toggle();
+            $('#frame_wrapper').fadeIn("slow");
+            snapToAnker();
+        });
+    });
+});
 
 /*
     draggable frame functions
@@ -52,23 +52,6 @@ function selectFrame(element, stack)
 
     $(element).css({ "z-index": z + 1 })
 };
-
-$(function()
-{
-    $('#frame_wrapper').fadeIn("slow");
-    snapToAnker();
-
-    $(".draagbaar").draggable({ stack: ".draagbaar" });
-
-    $('.nav_bar').on('click', function() {
-        if ($(this).hasClass('open')) {
-            $(this).animate({'width': '15px'}).removeClass('open');
-        }
-        else {
-            $(this).animate({'width': '50%'}).addClass('open');
-        }
-    });
-});
 
 
 /*

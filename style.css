@@ -70,7 +70,7 @@ blockquote
 {
 
 	font-size: 18pt;
-	margin:   2em -10px;
+	margin: 2em 10px;
 	line-height: 38px;
 }
 
@@ -157,6 +157,14 @@ hr
 	float: left;
 }
 
+.sesam
+{
+	width: 100vw;
+	text-align: center;
+	padding: 20px;
+	font-size: 16pt;
+}
+
 /* INTRO ESSAY STYES  */
 .intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
 {
@@ -217,7 +225,8 @@ hr
 }
 .essay_complete
 {
-
+	display: none;
+	height: 100%;
 	margin: 0 auto;
 	width: 650px;
 	margin-bottom: 200px;
@@ -296,6 +305,7 @@ a:active
 	cursor: all-scroll;
 	/*width: 300px;
 	height: 300px;*/
+	display: none;
 	overflow-y: none;
 	position: absolute;
 	z-index: 0;
