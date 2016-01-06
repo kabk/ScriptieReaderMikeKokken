@@ -17,7 +17,7 @@ function loadEssay()
 {
     $('#the_essay').fadeIn( "slow", function()
     {
-        $('#frame_wrapper').fadeIn("slow");
+
 
         $.scrollTo( $('#the_essay'), 1000 );
         $('footer').fadeIn("slow");
@@ -26,7 +26,7 @@ function loadEssay()
         // deze if statement zorgt ervoor dat als je nog een keer op lees klikt die frames niet nog een keer gepositioneerd worden.
         if (firstTry)
         {
-            snapToAnker();
+
             firstTry = false;
         }
     });
@@ -55,7 +55,19 @@ function selectFrame(element, stack)
 
 $(function()
 {
+    $('#frame_wrapper').fadeIn("slow");
+    snapToAnker();
+
     $(".draagbaar").draggable({ stack: ".draagbaar" });
+
+    $('.nav_bar').on('click', function() {
+        if ($(this).hasClass('open')) {
+            $(this).animate({'width': '15px'}).removeClass('open');
+        }
+        else {
+            $(this).animate({'width': '50%'}).addClass('open');
+        }
+    });
 });
 
 
