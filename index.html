@@ -16,20 +16,48 @@
 		<link type="text.css" rel="stylesheet" href="responsive.css">
 </head>
 
+<!-- TODO:
+		- voetnoten in lijst, zelfde structuur als de hoofdstuken
+		- styling broodtekst
+		- opruimen niet gebruikte styling
+-->
+
+
 <body>
 	<div id="wrapper">
 		<nav>
 			<!-- Voetnoten Balk [ right ] -->
-			<section class="nav_bar" id="right_nav_bar">
+			<div class="nav_bar" id="right_nav_bar">
 				<div class="handle" id="right_handle"></div>
 
-			</section>
-			<!-- Hoofdstukken Balk [ left ] -->
-			<section class="nav_bar" id="left_nav_bar">
-				<div class="handle" id="left_handle"></div>
-			</section>
-		</nav>
+				<ul class="footnote_list">
+					<li><a href="#0.introductie">0 Introductie</a></li>
+					<li><a href="#1.narratief">1 Narratief</a></li>
+					<li><a href="#2.non-lineariteit">2 Non-lineariteit</a></li>
+					<li><a href="#3.vervalvanhetnarratief">3 Verval van het narratief</a></li>
+					<li><a href="#3.1gevolgenvanhet‘nu’">3.1 Gevolgen van het 'nu'</a></li>
+					<li><a href="#3.2herkenningvanhetverval">3.2 Herkenning van het verval</a></li>
+					<li><a href="#4.eenopsommingvanmogelijkheden">4 Een opsomming van mogelijkheden</a></li>
+					<li><a href="#5.conclusie"> 5 Conclusie</a></li>
+				</ul>
 
+			</div>
+			<!-- Hoofdstukken Balk [ left ] -->
+			<div class="nav_bar" id="left_nav_bar">
+				<div class="handle" id="left_handle"></div>
+
+				<ul class="chapter_list">
+					<li><a href="#0.introductie">0 Introductie</a></li>
+					<li><a href="#1.narratief">1 Narratief</a></li>
+					<li><a href="#2.non-lineariteit">2 Non-lineariteit</a></li>
+					<li><a href="#3.vervalvanhetnarratief">3 Verval van het narratief</a></li>
+					<li><a href="#3.1gevolgenvanhet‘nu’">3.1 Gevolgen van het 'nu'</a></li>
+					<li><a href="#3.2herkenningvanhetverval">3.2 Herkenning van het verval</a></li>
+					<li><a href="#4.eenopsommingvanmogelijkheden">4 Een opsomming van mogelijkheden</a></li>
+					<li><a href="#5.conclusie"> 5 Conclusie</a></li>
+				</ul>
+			</div>
+		</nav>
 
 		<!-- COMPLETE ESSAYS -->
 		<section  class="essay_wrapper" id="essay_wrapper">
@@ -574,17 +602,16 @@
 			</div>
 			</article>
 
-
 	  		<div id="frame_wrapper">
 	  			<div class="ui-widget-content draagbaar" id="frame1">
 					<img src="afbeeldingen/01.jpg">
-					</div>
+				</div>
 
-					<div class="ui-widget-content draagbaar" id="frame2">
+				<div class="ui-widget-content draagbaar" id="frame2">
 					<img src="afbeeldingen/02.jpg">
-					</div>
+				</div>
 
-					<div class="ui-widget-content draagbaar" id="frame3">
+				<div class="ui-widget-content draagbaar" id="frame3">
 					<img src="afbeeldingen/03.jpg">
 	  			</div>
 

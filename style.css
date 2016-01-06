@@ -1,9 +1,17 @@
+
+
 html, body
 {
 	margin: 0;
 	padding: 0;
 	font-family: 'PT Serif', serif;
 	background-color: #F2F2F2;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after
+{
+	box-sizing: inherit;
 }
 
 h1
@@ -129,7 +137,25 @@ hr
 	background-color: red;
 	float: left;
 }
+.nav_bar ul
+{
+	padding: 0;
+	margin: 50px 0;
+}
+.nav_bar ul li
+{
+	list-style-type: none;
+	width: 25vw;
+}
 
+.chapter_list
+{
+	float: right;
+}
+.footnote_list
+{
+	float: left;
+}
 
 /* INTRO ESSAY STYES  */
 .intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
