@@ -145,7 +145,7 @@ hr
 .nav_bar ul li
 {
 	list-style-type: none;
-	width: 25vw;
+	width: 27vw;
 }
 
 .chapter_list
@@ -157,6 +157,11 @@ hr
 	float: left;
 }
 
+.sidenote_list
+{
+	float: right;
+}
+
 .sesam
 {
 	width: 100vw;
@@ -165,36 +170,13 @@ hr
 	font-size: 16pt;
 }
 
-/* INTRO ESSAY STYES  */
-.intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
-{
-/*	height: 100vh;*/
-	height: 100vh;
-	overflow-y: scroll;
-	background-color: #000;
-	color: #fff;
-}
-.intro_wrapper
-{
-	padding-top: 10vh;
-	padding-bottom: 200px;
-}
-.intro_essay
-{
-	width: 650px;
-	margin: 0 auto;
-	float: center;
-
-
-}
-
 /* COMPLETE ESSAY STYLES */
 
 .essay_wrapper
 {
 	clear: both;
 }
-
+/*
 .essay_nav, .essay_nav_inner
 {
 	width: 250px;
@@ -202,27 +184,8 @@ hr
 	margin-left: 20px;
 	margin-top:90px;
 }
+*/
 
-.essay_nav_inner
-{
-	font-size: 10pt;
-
-}
-
-.essay_nav ul
-{
-	padding: 10px 0 0;
-}
-.essay_nav li
-{
-	list-style-type: none;
-	margin-bottom: 10px;
-}
-.scrolling
-{ /* keep the navigatation at the top */
-    position: fixed;
-    top: 0;
-}
 .essay_complete
 {
 	display: none;
@@ -234,22 +197,21 @@ hr
 
 
 
-.footnote
-{
-	font-family: 'Univers', sans-serif;
-	font-weight: normal;
-	font-size:8pt;
-	color:#404040;
-	vertical-align: super;
-	margin: 0 0 0 3px;
-}
 
 
 .footnotes p
 {
 	font-family: 'Univers', sans-serif;
-	font-size:10pt;
-	line-height: 26px;
+	font-size:12pt;
+	line-height: 32px;
+
+}
+
+.sidenotes p
+{
+	font-family: 'PT Sans', sans-serif;
+	font-size:12pt;
+	line-height: 32px;
 
 }
 
@@ -262,23 +224,8 @@ hr
 	display: none;
 }
 
-/* andere stijlen */
-.button
-{
-	color: #fff;
-	padding: 7px 10px;
-	border:2px solid #fff;
-	font-family: 'Univers', sans-serif;
-	font-size: 10pt;
-	margin-left: 20pt;
 
-}
-.button:hover
-{
-	background: #fff;
-	color:#000;
-	text-shadow: none;
-}
+
 
 /* links stijlen */
 a
@@ -424,7 +371,7 @@ span.anker
 }
 
 
-/* KLOOTZAKKEN */
+/* KLOOTZAKKEN_tekst in kader */
 
 .klootzakken-buiten {
 	position:relative;
