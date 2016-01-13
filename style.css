@@ -17,6 +17,7 @@ html, body
     height: 100%;
 }
 
+<<<<<<< HEAD
 .inhoudkop
 {
     display: none;
@@ -26,6 +27,9 @@ html, body
 {
     display: none;
 }
+=======
+
+>>>>>>> develop
 
 
 h1, h2, h3, h4, h5, h6
