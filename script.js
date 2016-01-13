@@ -1,126 +1,129 @@
-var firstTry = true;
+$(function() {
 
-function getRandomRange(min, max)
-{
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    var settings = {
+        mainClosedWith: 20,
+        mainOpenWidth: 70,
+        animationDuration: 500
+    };
 
-Array.max = function(array)
-{
-    return Math.max.apply(Math, array);
-}
+    function showChapterContainer($main, callback) {
+        $main.addClass('sesam').animate({
+            'width': settings.mainOpenWidth + 'vw',
+            'margin-left': '-' + settings.mainOpenWidth / 2 + 'vw'
+        }, function() {
+            if (callback) {
+                callback();
+            }
+        });
+    }
 
-$(function()
-{
-    $('.nav_bar').on('click', function() {
-        if ($(this).hasClass('open')) {
-            $(this).animate({'width': '15px'}).removeClass('open');
+    function hideChapterContainer($main, callback) {
+        $main.removeClass('sesam').animate({
+            'width': settings.mainClosedWith + 'px',
+            'margin-left': '-' + settings.mainClosedWith / 2 + 'px'
+        }, function() {
+            if (callback) {
+                callback();
+            }
+        });
+    }
+
+    function showChapter($chapter) {
+        $chapter.css({'display': 'block'}).addClass('active');
+    }
+
+    function hideChapter() {
+        $('.active').css({'display': 'none'}).removeClass('active');
+    }
+
+    function scrollToTerm(sTermName) {
+        $('.main_inner').scrollTo(sTermName, settings.animationDuration, showTerm(sTermName));
+    }
+
+    function showTerm(sTermName) {
+        $('#' + sTermName).find('.term_content').addClass('active_term').slideDown();
+    }
+
+    function hideTerm() {
+        $('.active_term').removeClass('active_term').slideUp();
+    }
+
+    $('.c_link').on('click', function() {
+        var $main = $('main'),
+            iChapterId = $(this).attr('data-chapter-id'),
+            iActiveId =  $('.active').attr('id');
+
+
+        if ($main.hasClass('sesam')) {
+            hideChapterContainer($main, function() {
+
+                // hide visible terms
+                hideTerm();
+                hideChapter();
+
+                if (iChapterId !== iActiveId) {
+                    showChapterContainer($main);
+                    showChapter($('#' + iChapterId));
+                }
+
+            });
         }
         else {
-            $(this).animate({'width': '50%'}).addClass('open');
+            showChapterContainer($main);
+            showChapter($('#' + iChapterId));
         }
     });
 
-    $(".draagbaar").draggable({ stack: ".draagbaar" });
+    $('.t_link').on('click', function() {
+        var $main = $('main'),
+            iChapterId = $(this).attr('data-chapter-id'),
+            iActiveId =  $('.active').attr('id'),
+            sTermId = $(this).attr('data-term-id');
 
-    $('.sesam').on('click', function() {
-        $('.essay_complete').slideToggle(10000, function() {
-            $('.draagbaar').toggle();
-            $('#frame_wrapper').fadeIn("slow");
-            snapToAnker();
-        });
-    });
-});
+        if ($main.hasClass('sesam')) {
+            hideChapterContainer($main, function() {
 
-/*
-    draggable frame functions
-*/
+                // hide visible terms
+                hideTerm();
+                hideChapter();
 
-function selectFrame(element, stack)
-{
-    var a = [];
+                if (iChapterId !== iActiveId) {
+                    showChapter($('#' + iChapterId));
+                    showChapterContainer($main);
+                }
 
-    $(stack).each(function ()
-    {
-        a.push( $(this).css( "z-index") )
-    });
-
-    // console.log(a[0], a[1], a[2]);
-
-    var z = Array.max(a);
-    console.log(maxZ);
-
-    $(element).css({ "z-index": z + 1 })
-};
-
-
-/*
-    snap elke frame aan een anker om de positie te bepalen
-*/
-function snapToAnker()
-{
-    var ankers = []; // array om de positie van elk anker in op te slaan
-    var frames = []; // array om de oorspronkelijk positie van elk frame in op te slaan
-    var nummer = 0;  // variable (om elk frame te kunnen selecteren in een loop)
-
-    $(".anker").each(function ()
-    {
-        ankers.push( $(this).offset() );
-    });
-
-
-    $(".draagbaar").each(function ()
-    {
-        frames.push( $(this).offset() );
-    });
-
-    if (ankers.length == frames.length)
-    {
-        for (var i = 0; i < ankers.length; i++)
-        {
-            nummer = i + 1;
-
-            // console.log( ankers[i].top + ", " + ankers[i].left );
-            // console.log( frames[i].top + ", " + frames[i].left );
-
-           $("#frame" + nummer).css(
-           {
-                "top": ankers[i].top + frames[i].top + "px",
-                "left": ankers[i].left + frames[i].left + "px"
-                // "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"
-           });
+            });
         }
-    }
-    else
-    {
-        alert("Er zijn niet een gelijk aantal ankers en frames..")
-    }
+        else {
+            // THE ONLY DIFFERENCE WITH THE CHAPTER LINK
+            showChapterContainer($main, function() {
+                scrollToTerm(sTermId);
+            });
 
-    console.log("ankers: " +ankers.length+ ", frames: " +frames.length)
-
-}
-/*
-    smoooth scroll function
-*/
-
-$(function()
-{
-    $('a[href*=#]:not([href=#])').click(function()
-    {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname)
-        {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice1 +']');
-
-            if (target.length)
-            {
-                $('html,body').animate(
-                {
-                    scrollTop: target.offset().top
-                }, 1500);
-
-                return false;
-            }
+            showChapter($('#' + iChapterId));
         }
+    });
+
+    $('.term_title').on('click', function() {
+        var $termContent = $(this).siblings('.term_content');
+
+        if ($termContent.hasClass('active_term')) {
+            hideTerm();
+        }
+        else {
+            showTerm($(this).parent().parent().attr('id'));
+        }
+    });
+
+    $('.c_link').hover(function() {
+        $(this).animate({'margin-left': '-2em'});
+    }, function() {
+        $(this).animate({'margin-left': '0'});
+    });
+
+    $('.t_link').hover(function() {
+        $(this).animate({'margin-right': '-2em'});
+    }, function() {
+        $(this).animate({'margin-right': '0'});
     });
 });
