@@ -1,462 +1,196 @@
-
-
 html, body
 {
-	margin: 0;
-	padding: 0;
-	font-family: 'PT Serif', serif;
-	background-color: #F2F2F2;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-
 *, *:before, *:after
 {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-h1
+#container
 {
-	margin: 5em 0 0.5em 0;
-	font-size: 36px;
-	font-style: bold;
-	line-height: 30px;
-	text-align: center;
-	color:black;
-
+    position: absolute;
+    width: 100vw;
+    height: 100%;
 }
-h2
+
+h1, h2, h3, h4, h5, h6
 {
-	font-size:22px;
-	font-style:bold;
-	margin: 2.5em 0 0.5em;
+    font-family: "PT Sans";
+    margin-bottom: 1em;
 }
 
-h3
+/*****
+
+    Navigatie
+
+*****/
+
+nav
 {
-
-	margin: 0 0 7em 0;
-	font-size: 18px;
-	text-align: center;
-	line-height: 14px;
-	color:black;
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    padding: 100px 10vw;
+    font: bold normal 24pt/1.4em "PT Sans", sans-serif;
 }
-
-h4 {
-	font-size: 20px;
-	font-style: italic;
-    text-decoration: underline;
-    text-align: center;
-}
-
-h5 {
-	font-size: 10px;
-	line-height: 14px;
-	margin: 0.1em;
-}
-
-p
+nav ul
 {
-	margin: 1em;
-	font-size: 18px;
-	line-height: 30px;
-	/*text-align: justify;
-    text-justify: inter-word;*/
-
+    margin: 0;
+    padding: 0;
 }
-
-
-
-blockquote
+nav ul li
 {
-
-	font-size: 18pt;
-	margin:   2em -10px;
-	line-height: 38px;
+    list-style-type: none;
+    cursor: pointer;
 }
 
-#wrapper
+#hoofdstukken
 {
-	/* padding: 50px 40px 20px 40px; */
+    background-color: lightgrey;
+    left:0;
+    padding-right: 0;
 }
-header
+#termen
 {
-	padding: 5vh 40px;
-	height: 10vh;
+    background-color: white;
+    right: 0;
+    padding-left: 0;
+    text-align: right;
 }
-footer
-{
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	height: 100px;
-	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 83%, rgba(255,255,255,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(83%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
-	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
-	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
-	pointer-events:none;
-	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );  MICROSOFT... *sigh*  */
-}
-hr
-{
-    border: 0;
-  	border-top: 2px solid #000;
-}
-/* THESIS NAVIGATION */
+/*****
 
-.nav_bar
+    Hoofdstukken & Voetnoten
+
+*****/
+
+
+main
 {
-	position: fixed;
-	top: 0;
-	height: 100vh;
-	width: 15px;
-	z-index: 100;
-	background-color: #F2F2F2;
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    background-color: WhiteSmoke;
+    margin-left: -10px;
+    width: 20px;
+    height: 100vh;
+    z-index: 10;
 }
-#left_nav_bar
+.main_inner
 {
-	left: 0;
+    position: absolute;
+    width: 100%;
+    margin-left: -15px;
+    padding-right: 30px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 15;
 }
-#right_nav_bar
+
+.footnotes
 {
- 	right: 0;
+    font: normal normal 10pt/1.2em "Courier", serif;
+    padding: 20px 7vw;
 }
+
+
+main article
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    padding: 50px 10vw;
+    font: normal normal 18pt/1.6em "PT Serif", sans-serif;
+}
+
+
+.content
+{
+    margin-left: 30px;
+}
+
 .handle
 {
-	height: 100vh;
-	width:15px;
+    position: absolute;
+    top:0;
+    width: 10px;
+    height: 100vh;
 }
-#left_handle
+
+.left
 {
-	background-color: yellow;
-	float: right;
+    background-color: black;
+    left:0;
 }
-#right_handle
+.right
 {
-	background-color: red;
-	float: left;
+    background-color: blue;
+    right:0;
 }
-.nav_bar ul
+
+.vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*****
+
+    Termen
+
+*****/
+
+
+.term_wrapper
 {
-	padding: 0;
-	margin: 50px 0;
-}
-.nav_bar ul li
-{
-	list-style-type: none;
-	width: 25vw;
-}
-
-.chapter_list
-{
-	float: right;
-}
-.footnote_list
-{
-	float: left;
-}
-
-/* INTRO ESSAY STYES  */
-.intro_scrollbox /* this is just a box so that we can scroll the intro wrapper */
-{
-/*	height: 100vh;*/
-	height: 100vh;
-	overflow-y: scroll;
-	background-color: #000;
-	color: #fff;
-}
-.intro_wrapper
-{
-	padding-top: 10vh;
-	padding-bottom: 200px;
-}
-.intro_essay
-{
-	width: 650px;
-	margin: 0 auto;
-	float: center;
-
-
-}
-
-/* COMPLETE ESSAY STYLES */
-
-.essay_wrapper
-{
-	clear: both;
-}
-
-.essay_nav, .essay_nav_inner
-{
-	width: 250px;
-	float: left;
-	margin-left: 20px;
-	margin-top:90px;
-}
-
-.essay_nav_inner
-{
-	font-size: 10pt;
-
-}
-
-.essay_nav ul
-{
-	padding: 10px 0 0;
-}
-.essay_nav li
-{
-	list-style-type: none;
-	margin-bottom: 10px;
-}
-.scrolling
-{ /* keep the navigatation at the top */
-    position: fixed;
-    top: 0;
-}
-.essay_complete
-{
-
-	margin: 0 auto;
-	width: 650px;
-	margin-bottom: 200px;
-}
-
-
-
-.footnote
-{
-	font-family: 'Univers', sans-serif;
-	font-weight: normal;
-	font-size:8pt;
-	color:#404040;
-	vertical-align: super;
-	margin: 0 0 0 3px;
-}
-
-
-.footnotes p
-{
-	font-family: 'Univers', sans-serif;
-	font-size:10pt;
-	line-height: 26px;
-
-}
-
-/* ESSAY SWITCH STYLES */
-
-.the_essay
-{
-	margin-top: 25px;
-	padding-top: 25px;
-	display: none;
-}
-
-/* andere stijlen */
-.button
-{
-	color: #fff;
-	padding: 7px 10px;
-	border:2px solid #fff;
-	font-family: 'Univers', sans-serif;
-	font-size: 10pt;
-	margin-left: 20pt;
-
-}
-.button:hover
-{
-	background: #fff;
-	color:#000;
-	text-shadow: none;
-}
-
-/* links stijlen */
-a
-{
-	color: black;
-	text-decoration: none;
-}
-a:hover
-{
-	color: red;
-	text-decoration: underline;
-
-}
-a:visited
-{
-	text-decoration: none;
-}
-a:active
-{
-	text-decoration: none;
-}
-.draagbaar
-{
-	cursor: all-scroll;
-	/*width: 300px;
-	height: 300px;*/
-	overflow-y: none;
-	position: absolute;
-	z-index: 0;
-}
-#frame_wrapper
-{
-	display: none;
-}
-
-
-span.anker
-{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	/*background-color: #0f0;*/
-}
-
-/*
-	note; let op elke frame moet een TOP en een LEFT waarde hebben. OOK als die 0 is!
-*/
-#frame1
-{
-	width:298px;
-	height:300;
-	top: 0px;
-	left: -50px;
-}
-
-#frame2
-{
-	width:200px;
-	height:300;
-	top: 0px;
-	left: -30px;
-}
-
-#frame3
-{
-	width:300px;
-	height:180;
-	top: 0px;
-	left: 300px;
-}
-
-#frame4
-{
-	width:300px;
-	height:225px;
-	top: 100px;
-	left: 0px;
-}
-
-#frame5
-{
-	width:300px;
-	height:204px;
-	top: 0px;
-	left: -200px;
-}
-
-#frame6
-{
-	width:300px;
-	height:300;
-	top: 2000px;
-	left: -100px;
-}
-
-#frame7
-{
-	width:300px;
-	height:0;
-	top: 0px;
-	left:-200px;
-}
-
-#frame8
-{
-	width:300px;
-	height:200px;
-	top: 0px;
-	left: -300px;
-}
-
-#frame9
-{
-	width:300px;
-	height:153px;
-	top: 100px;
-	left: -100px;
-}
-
-#frame10
-{
-	width:300px;
-	height:200px;
-	top: 0px;
-	left: -100px;
-}
-
-#frame11
-{
-	width:300px;
-	height:200px;
-	top: 50px;
-	left: -100px;
-}
-
-#frame12
-{
-	width:300px;
-	height:200px;
-	top: 0px;
-	left: 100px;
-}
-
-
-/* KLOOTZAKKEN */
-
-.klootzakken-buiten {
 	position:relative;
 	z-index:999;
-	background-color: #F2F2F2;
+	background-color: WhiteSmoke;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	margin:-1.8em 0 -2em;
+	margin: -1.6em 0 -1.8em;
 
 
 }
-.klootzakken-binnen {
-	height: 50vh;
-
-	overflow-y: scroll;
-}
-h6
+.term_title
 {
-	font-family: sans-serif;
-	font-size: 24pt;
-	font-weight: bold;
-	margin:0 ;
+	font: normal bold 24pt/1.5em "PT Sans", sans-serif;
+	margin: 0;
+    cursor: pointer;
 }
 
-.klootzakkenItal{
+.term_wrapper_inner
+{
+	overflow-y: auto;
+}
+
+.term_content
+{
+    display: none;
+    font: normal normal 14pt/1.5em "PT Serif", serif;
+	margin: 0 1.2em;
+    height: 300px;
+}
+.term_content p:last-child
+{
+    padding-bottom: 2em;
+}
+.term_content .quote
+{
 	font-size: 24pt;
 	font-style: italic;
 	line-height: 1.2;
 	margin: 0.2em;
 }
 
-.klootzakkenOnder{
+.term_content .quote .bron
+{
 	font-size: 10px;
 	line-height: 14px;
 	margin: 0.1em;
-}
-.klootzakken-binnen p {
-	font-size: 20pt;
-	line-height: 1.5em;
-	margin: 1.5em;
-}
-
-.klootzakkenRef {
-	font: normal bold 12pt/1em "Helvetica", sans-serif;
 }
