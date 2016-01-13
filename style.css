@@ -17,10 +17,26 @@ html, body
     height: 100%;
 }
 
+.inhoudkop
+{
+    display: none;
+}
+
+.termenkop
+{
+    display: none;
+}
+
+
 h1, h2, h3, h4, h5, h6
 {
     font-family: "PT Sans";
     margin-bottom: 1em;
+}
+
+h7
+{
+    font: normal bold 18pt/1.6em "PT Serif", sans-serif;
 }
 
 /*****
@@ -51,12 +67,14 @@ nav ul li
 #hoofdstukken
 {
     background-color: lightgrey;
+    font: normal bold 16pt/1.4 em "PT serif",serif;
     left:0;
     padding-right: 0;
 }
 #termen
 {
     background-color: white;
+    font: normal bold 16pt/1.4 em "PT Sans",sans-serif;
     right: 0;
     padding-left: 0;
     text-align: right;
@@ -172,7 +190,7 @@ main article
 .term_content
 {
     display: none;
-    font: normal normal 14pt/1.5em "PT Serif", serif;
+    font: normal normal 24pt/1.5em "PT Serif", serif;
 	margin: 0 1.2em;
     height: 300px;
 }
