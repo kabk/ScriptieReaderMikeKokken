@@ -17,8 +17,26 @@ html, body
     height: 100%;
 }
 
-.abc > p {
-    font: normal bold 18pt/1.6em "PT Sans", sans-serif;
+.t1 > p {
+    font: normal normal 18pt/1.6em "PT Sans", sans-serif;
+}
+.t2 > p {
+    font: normal normal 18pt/1.6em "PT Serif", serif;
+}
+.t3 > p {
+    font: normal normal 18pt/1.6em "Courier", serif;
+}
+.t4 > p {
+    font: normal normal 18pt/1.6em "Helvetica", sans-serif;
+}
+.t5 > p {
+    font: normal normal 18pt/1.6em "Arial", sans-serif;
+}
+.t6 > p {
+    font: normal normal 18pt/1.6em "Times", serif;
+}
+.t7 > p {
+    font: normal normal 18pt/1.6em "Univers", sans-serif;
 }
 
 
