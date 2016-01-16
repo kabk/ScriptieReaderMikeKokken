@@ -37,7 +37,7 @@ $(function() {
     }
 
     function scrollToTerm(sTermName) {
-        $('.main_inner').scrollTo(sTermName, settings.animationDuration, showTerm(sTermName));
+        $('.main_inner').scrollTo('#' + sTermName, settings.animationDuration, showTerm(sTermName));
     }
 
     function showTerm(sTermName) {
